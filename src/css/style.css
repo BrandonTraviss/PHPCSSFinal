@@ -13,6 +13,7 @@
 :root {
     --brand: #242835;
     --brand-2: #D0852A;
+    --brand-3:#ec9e3f;
     --brand-light: #C0C1C1;
     --light: #fff7de;
     --dark: ;
@@ -68,11 +69,13 @@ a {
     justify-content: center;
     padding: var(--spacing-md);
     color: var(--light);
+    font-weight: 900;
 }
 
 /* Navigation */
 header {
     background-color: var(--brand);
+    box-shadow: 0px 10px 10px 1px rgba(0, 0, 0, 0.2);
 }
 
 nav {
@@ -98,7 +101,9 @@ nav {
     color: var(--brand-light);
     font-weight: 900;
 }
-
+.desktop-menu>li>a:hover{
+    color: var(--light);
+}
 .logo-container {
     display: flex;
     width: 15rem;
@@ -110,12 +115,93 @@ nav {
     height: 100%;
 }
 
+/* FOOTER */
+footer {
+    color: var(--brand-light);
+    background-color: var(--brand);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+        "footer1 footer2 footer3"
+        "copyright copyright copyright";
+}
+
+.footer1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: footer1;
+}
+
+.footer1>ul {
+    list-style: none;
+}
+
+.footer1>ul>li>a {
+    font-size: var(--font-size-sm);
+    color: var(--brand-light);
+}
+
+.footer1>ul>li>a:hover {
+    color: var(--light);
+}
+
+.footer2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: footer2;
+}
+.footer2>div>h3{
+    color: var(--light);
+}
+.footer3 {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    grid-area: footer3;
+}
+
+.footer-logo-container {
+    width: 15rem;
+}
+
+.footer-logo-container>img {
+    width: 100%;
+}
+
+.socials {
+    display: flex;
+    justify-content: space-between;
+    gap: var(--spacing-lg);
+}
+
+.social-svg>svg {
+    fill: var(--brand-light);
+  width: 2.5rem;
+  height: auto; /* Keeps aspect ratio */
+}
+.social-svg svg:hover{
+    fill: var(--light);
+    transform: scale(1.2);
+}
+
+.copyright {
+    text-align: center;
+    grid-area: copyright;
+}
+
 /* Buttons */
 .btn-brand-2 {
     color: var(--light);
     background-color: var(--brand-2);
     padding: var(--spacing-md);
     border-radius: var(--border-radius);
+}
+.btn-brand-2:hover {
+    transform: scale(1.1);
+    background-color: var(--brand-3);
 }
 
 /* INDEX PAGE*/
@@ -127,6 +213,9 @@ nav {
     gap: var(--spacing-lg);
     font-size: var(--font-size-md);
     min-height: 80vh;
+}
+.index-hero>div{
+    text-align: center;
 }
 
 .index-hero>h1 {
