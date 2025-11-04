@@ -1,0 +1,89 @@
+/* Import Font */
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+/* Reset */
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Variables */
+:root{
+    --brand:#242835;
+    --brand-2: #242835;
+    --brand-light:#C0C1C1;
+    --light:#FAF9F6;
+    --dark: ;
+    --vintage-plum: #6E3B5E;
+    --ivory: #F8F4EC;
+    --burnt-sienna: #E97451;
+    --forest-green: #2E4A3B;
+    --charcoal: #2C2C2C;
+
+    --spacing-sm:0.5rem;
+    --spacing-md:1rem;
+    --spacing-lg:2rem;
+    --spacing-xl:5rem;
+
+    --font-nav:"Lobster Two", sans-serif;
+    --font-headings: ;
+    --font-body: ;
+
+    --font-size-sm:1.1rem;
+    --font-size-md:1.3rem;
+    --font-size-lg:1.5rem;
+    --font-size-xl:2rem;
+    --font-size-xxl:3rem;
+}
+/* Body */
+body{
+    background-color: var(--light);
+    color: var(--light);
+}
+/* Standardize Elements */
+a,p{
+    font-size: var(--font-size-lg);
+    text-decoration: none;
+}
+/* CTA */
+.sale-CTA{
+    background-color: #D0852A;
+}
+.sale-CTA>a{
+    display: flex;
+    justify-content: center;
+    padding: var(--spacing-md);
+    color: var(--light);
+}
+/* Navigation */
+header{
+    background-color: var(--brand);
+}
+nav{
+    font-family: var(--font-nav);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: 2rem;
+}
+.mobile-menu{
+    display: none;
+}
+.desktop-menu{
+    display: flex;
+    gap: var(--spacing-xl);
+    list-style: none;
+}
+.desktop-menu>li>a{
+    color: var(--brand-light);
+    font-weight: 900;
+}
+.logo-container{
+    display: flex;
+    width: 15rem;
+    height: auto;
+}
+.logo-container>img{
+    width: 100%;
+    height: 100%;
+}
