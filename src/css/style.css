@@ -12,16 +12,10 @@
 /* Variables */
 :root {
     --brand: #242835;
-    --brand-2: #D0852A;
-    --brand-3:#ec9e3f;
+    --brand-hover: #373c4e;
     --brand-light: #C0C1C1;
-    --light: #fff7de;
-    --dark: ;
-    --vintage-plum: #6E3B5E;
-    --ivory: #F8F4EC;
-    --burnt-sienna: #E97451;
-    --forest-green: #2E4A3B;
-    --charcoal: #2C2C2C;
+    --light: #F8F4EC;
+    --dark: #2C2C2C;
 
     --spacing-sm: 0.5rem;
     --spacing-md: 1rem;
@@ -61,7 +55,7 @@ a {
 
 /* CTA */
 .sale-CTA {
-    background-color: var(--brand-2);
+    background-color: var(--dark);
 }
 
 .sale-CTA>a {
@@ -101,9 +95,11 @@ nav {
     color: var(--brand-light);
     font-weight: 900;
 }
-.desktop-menu>li>a:hover{
+
+.desktop-menu>li>a:hover {
     color: var(--light);
 }
+
 .logo-container {
     display: flex;
     width: 15rem;
@@ -152,9 +148,11 @@ footer {
     align-items: center;
     grid-area: footer2;
 }
-.footer2>div>h3{
+
+.footer2>div>h3 {
     color: var(--light);
 }
+
 .footer3 {
     display: flex;
     justify-content: center;
@@ -179,10 +177,12 @@ footer {
 
 .social-svg>svg {
     fill: var(--brand-light);
-  width: 2.5rem;
-  height: auto; /* Keeps aspect ratio */
+    width: 2.5rem;
+    height: auto;
+    /* Keeps aspect ratio */
 }
-.social-svg svg:hover{
+
+.social-svg svg:hover {
     fill: var(--light);
     transform: scale(1.2);
 }
@@ -195,13 +195,16 @@ footer {
 /* Buttons */
 .btn-brand-2 {
     color: var(--light);
-    background-color: var(--brand-2);
+    font-weight: 700;
+    background-color: var(--brand);
     padding: var(--spacing-md);
     border-radius: var(--border-radius);
 }
+
 .btn-brand-2:hover {
     transform: scale(1.1);
-    background-color: var(--brand-3);
+    background-color: var(--brand-hover);
+
 }
 
 /* INDEX PAGE*/
@@ -212,9 +215,11 @@ footer {
     flex-direction: column;
     gap: var(--spacing-lg);
     font-size: var(--font-size-md);
-    min-height: 80vh;
+    min-height: 100vh;
+    padding-block: 5rem;
 }
-.index-hero>div{
+
+.index-hero>div {
     text-align: center;
 }
 
@@ -228,4 +233,39 @@ footer {
 .index-hero>h2 {
     color: var(--brand);
     font-size: var(--font-size-lg);
+}
+
+.book-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 1rem;
+    gap: var(--spacing-xl);
+}
+.book-img-container{
+    width: 332px;
+    height: auto;
+}
+.book-img-container>img{
+    width: 100%;
+    height: auto;
+}
+.book-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: auto;
+  width: 332px; 
+  height: auto;
+  align-self: stretch;
+}
+.book-card:hover{
+    transform: scale(1.1);
+}
+
+.book-card>a>div>img {
+    border-radius: var(--border-radius);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
